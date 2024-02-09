@@ -25,9 +25,9 @@ public class LoginStepDefination {
 	    // Write code here that turns the phrase above into concrete actions
 	    throw new io.cucumber.java.PendingException();
 	}
-	@Then("I should see a welcome message")
-	public void i_should_see_a_welcome_message() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
-	}
+	/*
+	 * @Then("I should see a welcome message") public void
+	 * i_should_see_a_welcome_message() { // Write code here that turns the phrase
+	 * above into concrete actions throw new io.cucumber.java.PendingException(); }
+	 */
 }
