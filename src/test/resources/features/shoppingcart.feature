@@ -17,3 +17,16 @@ Feature: Shopping Cart
     Given I have items in the cart
     When I view the cart
     Then I should see the items in the cart
+    
+   @setup
+  Scenario: Example Scenario with Setup
+    Given I have a precondition
+    When I perform some action
+    Then I should see the expected result
+
+  @cleanup
+  Scenario: Example Scenario with Cleanup
+    Given I have a precondition
+    When I perform some action
+    Then I should see the expected result
+  

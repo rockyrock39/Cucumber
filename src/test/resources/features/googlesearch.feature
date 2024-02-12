@@ -5,7 +5,9 @@ Feature: User Authentication
 
   Scenario: Valid User login
   	Given I am on the login page
-  	When I enter Valid Credentials
+  	When I enter<Login> <password> Valid Credentials
+  	|Login|password|
+  	|Rahul|@Abcd1234|
   	And I click the login button
   	Then  I should redirected to the dashboard
     And I should see a welcome message

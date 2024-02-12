@@ -48,4 +48,21 @@ public void i_should_see_the_items_in_the_cart() {
     // Write code here that turns the phrase above into concrete actions
 	System.out.println("I should see the items in the cart");
 }
+
+
+@Given("I have a precondition")
+public void i_have_a_precondition() {
+    // Write code here that turns the phrase above into concrete actions
+    System.out.println("I have a precondition");
+}
+@When("I perform some action")
+public void i_perform_some_action() {
+    // Write code here that turns the phrase above into concrete actions
+	 System.out.println("I perform some action");
+}
+@Then("I should see the expected result")
+public void i_should_see_the_expected_result() {
+    // Write code here that turns the phrase above into concrete actions
+	 System.out.println("I should see the expected result");
+}
 }
