@@ -1,58 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-02-09T07:00:31 GMT" name="Default suite" finished-at="2024-02-09T07:00:32 GMT" duration-ms="1165">
+  <suite started-at="2024-02-12T05:19:32 GMT" name="Default suite" finished-at="2024-02-12T05:19:32 GMT" duration-ms="511">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.UserAuthTest@60bd273d]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.Addparam@60bd273d]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2024-02-09T07:00:31 GMT" name="Default test" finished-at="2024-02-09T07:00:32 GMT" duration-ms="1165">
-      <class name="runner.UserAuthTest">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runner.UserAuthTest@60bd273d]" started-at="2024-02-09T07:00:31 GMT" name="setUpClass" finished-at="2024-02-09T07:00:32 GMT" duration-ms="816" status="PASS">
+    <test started-at="2024-02-12T05:19:32 GMT" name="Default test" finished-at="2024-02-12T05:19:32 GMT" duration-ms="511">
+      <class name="runner.Addparam">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runner.Addparam@60bd273d]" started-at="2024-02-12T05:19:32 GMT" name="setUpClass" finished-at="2024-02-12T05:19:32 GMT" duration-ms="307" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@36c54a56]]>
+                <![CDATA[org.testng.TestRunner@19fb8826]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.UserAuthTest@60bd273d]" started-at="2024-02-09T07:00:32 GMT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-02-09T07:00:32 GMT" duration-ms="202" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.Addparam@60bd273d]" started-at="2024-02-12T05:19:32 GMT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-02-12T05:19:32 GMT" duration-ms="128" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Valid User login"]]>
+                <![CDATA["Title of your scenario outline"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["User Authentication"]]>
+                <![CDATA["Title of your Features"]]>
               </value>
             </param>
           </params>
-          <exception class="io.cucumber.java.PendingException">
-            <message>
-              <![CDATA[TODO: implement me]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[io.cucumber.java.PendingException: TODO: implement me
-at stepDefinations.LoginStepDefination.i_am_on_the_login_page(LoginStepDefination.java:11)
-at ✽.I am on the login page(file:///C:/Users/Administrator/Documents/GitHub/Cucumber/src/test/resources/features/UserAuthentication.feature:7)
-]]>
-            </full-stacktrace>
-          </exception> <!-- io.cucumber.java.PendingException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runner.UserAuthTest@60bd273d]" started-at="2024-02-09T07:00:32 GMT" name="tearDownClass" finished-at="2024-02-09T07:00:32 GMT" duration-ms="74" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.Addparam@60bd273d]" started-at="2024-02-12T05:19:32 GMT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-02-12T05:19:32 GMT" duration-ms="10" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Title of your scenario outline"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Title of your Features"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runner.Addparam@60bd273d]" started-at="2024-02-12T05:19:32 GMT" name="tearDownClass" finished-at="2024-02-12T05:19:32 GMT" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
-      </class> <!-- runner.UserAuthTest -->
+      </class> <!-- runner.Addparam -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
