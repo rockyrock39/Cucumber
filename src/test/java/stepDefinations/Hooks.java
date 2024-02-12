@@ -19,13 +19,13 @@ public class Hooks {
 	    }
 
 	    @Before
-	    public void setUp() {
+	    public void setUp1() {
 	        // Code to set up preconditions before each scenario
 	        System.out.println("Setting up before scenario...");
 	    }
 
 	    @After
-	    public void tearDown() {
+	    public void tearDown1() {
 	        // Code to clean up after each scenario
 	        System.out.println("Tearing down after scenario...");
 	    }
