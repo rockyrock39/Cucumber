@@ -1,23 +1,36 @@
 package stepDefinations;
 
+import java.util.List;
+import java.util.Map;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 import Selenuium.TestCaseBasePage;
 import base.TestBase;
-import dev.failsafe.internal.util.Assert;
+import org.testng.Assert;
 import io.cucumber.java.en.*;
 import page.HomePage;
 import page.Searchpage;
+import page.ShoppingCartPage;
+import page.checkoutpage;
+import io.cucumber.datatable.DataTable;
 
 public class TestCase1stepDefination {
 	WebDriver driver= TestBase.getDriver();
 	HomePage homepage;
 	Searchpage searchpage;
+	ShoppingCartPage shoppingCartPage;
+	checkoutpage Checkoutpage;
 	public TestCase1stepDefination()
 	{
 		homepage= new HomePage(driver);
 		searchpage= new Searchpage(driver);
-		
+		shoppingCartPage = new ShoppingCartPage(driver);
+		Checkoutpage =  new checkoutpage(driver);
 	}
 	
 	@Given("User Should be on search Result page")
@@ -68,12 +81,41 @@ public class TestCase1stepDefination {
 	public void user_do_checkout() {
 	    // Write code here that turns the phrase above into concrete actions
 
-		
+		shoppingCartPage.clickcheckout();
 		System.out.println("User do checkout" );
 	}
 	@Then("Should nevigate to Checkout page")
 	public void should_nevigate_to_checkout_page() {
 	    // Write code here that turns the phrase above into concrete actions
-		System.out.println("I am on the login page " );
+		
+		String checout=Checkoutpage.CheckoutpageHeader();
+		Assert.assertEquals(checout, "Checkout");
+		System.out.println("Should nevigate to Checkout page" + checout);
 	}
+	
+	@Then("user should fill out the form and click buy")
+	public void user_should_fill_out_the_form_and_click_buy(DataTable dataTable) throws InterruptedException {
+	    // Write code here that turns the phrase above into concrete actions
+	    // For automatic transformation, change DataTable to one of
+	    // E, List<E>, List<List<E>>, List<Map<K,V>>, Map<K,V> or
+	    // Map<K, List<V>>. E,K,V must be a String, Integer, Float,
+	    // Double, Byte, Short, Long, BigInteger or BigDecimal.
+	    //
+	    // For other transformations you can register a DataTableType.
+		List<Map<String, String>> data=dataTable.asMaps();
+		Checkoutpage.setName(data.get(0).get("name"));
+		Checkoutpage.setAddress(data.get(0).get("address"));
+		Checkoutpage.setSurname(data.get(0).get("surname"));
+		Checkoutpage.setCity(data.get(0).get("city"));
+		Checkoutpage.setZipcode(data.get(0).get("zipcode"));
+		Checkoutpage.setCompany(data.get(0).get("company"));
+		Checkoutpage.setRadio();
+		Checkoutpage.clickbuy();
+		
+		Assert.assertEquals(Checkoutpage.getOrderConfirmation(), "All good, order is on the way. Thank you!!");
+
+		
+		
+	}
+
 }

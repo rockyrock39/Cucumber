@@ -13,7 +13,7 @@ public class ShoppingCartPage {
 
 	@FindAll(value= @FindBy(css  =  "ul li"))
 	List<WebElement> Textbox1;
-	@FindBy(how = How.XPATH, using = "//button[contains(text(),'Checkout']")
+	@FindBy(how = How.XPATH, using = "//button[normalize-space()='Checkout']")
 	WebElement addtobutton;
 
 	public ShoppingCartPage(WebDriver driver) {

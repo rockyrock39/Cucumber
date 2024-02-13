@@ -14,4 +14,8 @@ Feature: Place Order
    Scenario: Checkout Order
   	Given User do checkout
   	Then  Should nevigate to Checkout page
+  	And   user should fill out the form and click buy
+  	
+  	|name|surname|address|zipcode|city|company|
+  	|Rahul|Sarma|gurugram|122101|gurugram|tcs| 
   	
