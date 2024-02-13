@@ -7,25 +7,33 @@ import base.TestBase;
 import dev.failsafe.internal.util.Assert;
 import io.cucumber.java.en.*;
 import page.HomePage;
+import page.Searchpage;
 
 public class TestCase1stepDefination {
 	WebDriver driver= TestBase.getDriver();
 	HomePage homepage;
+	Searchpage searchpage;
 	public TestCase1stepDefination()
 	{
 		homepage= new HomePage(driver);
+		searchpage= new Searchpage(driver);
 		
 	}
 	
 	@Given("User Should be on search Result page")
 	public void user_should_be_on_search_result_page() {
 	    // Write code here that turns the phrase above into concrete actions
-		
+		searchpage.vewitemsdetails();
+		System.out.println("User Should be on search Result page" );
 	}
+	
 	@When("User add item to cart")
 	public void user_add_item_to_cart() {
-	    // Write code here that turns the phrase above into concrete actions
-		System.out.println("I am on the login page " );
+		// Write code here that turns the phrase above into concrete actions
+
+		searchpage.addtocart();
+
+		System.out.println("I am on the login page ");
 	}
 	@Then("Item must be added")
 	public void item_must_be_added() {
@@ -52,15 +60,16 @@ public class TestCase1stepDefination {
 	@Then("Item must be listed")
 	public void item_must_be_listed() {
 	    // Write code here that turns the phrase above into concrete actions
-		
-		
-		System.out.println("I am on the login page " );
+		org.testng.Assert.assertTrue(searchpage.isButtonenable());
+		System.out.println("Item must be listed" );
 	}
 	
 	@Given("User do checkout")
 	public void user_do_checkout() {
 	    // Write code here that turns the phrase above into concrete actions
-		System.out.println("I am on the login page " );
+
+		
+		System.out.println("User do checkout" );
 	}
 	@Then("Should nevigate to Checkout page")
 	public void should_nevigate_to_checkout_page() {
