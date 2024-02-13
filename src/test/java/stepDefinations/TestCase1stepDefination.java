@@ -6,11 +6,14 @@ import Selenuium.TestCaseBasePage;
 import base.TestBase;
 import dev.failsafe.internal.util.Assert;
 import io.cucumber.java.en.*;
+import page.HomePage;
 
 public class TestCase1stepDefination {
 	WebDriver driver= TestBase.getDriver();
+	HomePage homepage;
 	public TestCase1stepDefination()
 	{
+		homepage= new HomePage(driver);
 		
 	}
 	
@@ -42,6 +45,8 @@ public class TestCase1stepDefination {
 		
 		//TestCaseBasePage.sendinputtext(string);
 		//TestCaseBasePage.clickonsearch();
+		homepage.sendSearchData(string);
+		homepage.searchbutton();
 		System.out.println("User Search an item {string} " );
 	}
 	@Then("Item must be listed")
