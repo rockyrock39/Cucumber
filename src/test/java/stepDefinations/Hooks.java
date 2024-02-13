@@ -1,5 +1,7 @@
 package stepDefinations;
 
+import Selenuium.TestCaseBasePage;
+import base.TestBase;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 
@@ -40,6 +42,18 @@ public class Hooks {
 	    public void tearDown1() {
 	        // Code to clean up after each scenario
 	        System.out.println("Tearing down after scenario with @cleanup tag...");
+	    }
+	    @Before("@first")
+	    public void setupDriver()
+	    
+	    {
+	    	TestBase.initiateDiver();;
+	    }
+	    
+	    @After
+	    public void TearDown()
+	    {
+	    	
 	    }
 
 }
