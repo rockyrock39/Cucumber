@@ -10,7 +10,7 @@ Feature: Place Order
   	Given User Should be on search Result page
   	When User add item to cart
   	Then  Item must be added
-  	
+ @last 	
    Scenario: Checkout Order
   	Given User do checkout
   	Then  Should nevigate to Checkout page

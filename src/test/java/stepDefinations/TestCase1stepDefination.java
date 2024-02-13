@@ -110,7 +110,9 @@ public class TestCase1stepDefination {
 		Checkoutpage.setZipcode(data.get(0).get("zipcode"));
 		Checkoutpage.setCompany(data.get(0).get("company"));
 		Checkoutpage.setRadio();
+		Checkoutpage.ZoomOut();
 		Checkoutpage.clickbuy();
+		Checkoutpage.backtoNormal();
 		
 		Assert.assertEquals(Checkoutpage.getOrderConfirmation(), "All good, order is on the way. Thank you!!");
 

@@ -85,7 +85,7 @@ public class checkoutpage {
 		//Thread.sleep(5000);
 		//js.executeScript("arguments[0].scrollIntoView();", buybutton);
 		//js.executeScript("window.scrollBy(0,350)","");
-		js.executeScript("document.body.style.zoom = '.7'");
+
 		js.executeScript("arguments[0].click();", buybutton);
 		js.executeScript("document.body.style.zoom = '1'");
 		 //buybutton.click();
@@ -97,6 +97,15 @@ public class checkoutpage {
 	
 	public String CheckoutpageHeader() {
 		return addtobutton.getText();
+	}
+	
+	public void ZoomOut()
+	{
+		js.executeScript("document.body.style.zoom = '.7'");
+	}
+	public void backtoNormal()
+	{
+		js.executeScript("document.body.style.zoom = '1'");
 	}
 	
 
