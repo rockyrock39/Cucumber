@@ -87,7 +87,7 @@ public class checkoutpage {
 		//js.executeScript("window.scrollBy(0,350)","");
 
 		js.executeScript("arguments[0].click();", buybutton);
-		js.executeScript("document.body.style.zoom = '1'");
+		//js.executeScript("document.body.style.zoom = '1'");
 		 //buybutton.click();
 	}
 	public String getOrderConfirmation()
